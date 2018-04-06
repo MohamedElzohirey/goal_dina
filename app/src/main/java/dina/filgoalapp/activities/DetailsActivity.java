@@ -1,4 +1,8 @@
 package dina.filgoalapp.activities;
 
-public class DetailsActivity {
+
+public class DetailsActivity    {
+
+
+
 }

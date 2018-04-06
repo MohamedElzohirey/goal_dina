@@ -50,30 +50,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-//        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//
-//
-//                switch (item.getItemId()) {
-//                    case R.id.nav_home:
-//                        reblaceFragmet(homeFragment);
-//                        return true;
-//
-//
-//                    case R.id.account_menu:
-//                        reblaceFragmet(newsFragment);
-//                        return true;
-//
-//                    case R.id.notification_menu:
-//                        reblaceFragmet(matchesFragment);
-//                        return true;
-//
-//                }
-//
-//                return false;
-//            }
-//        });
 
 
     }
