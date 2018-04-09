@@ -1,5 +1,7 @@
 package dina.filgoalapp.models;
 
+import android.support.v4.view.PagerAdapter;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -64,7 +66,7 @@ public class ModelPages {
         return title;
     }
 
-    public String getImageURL() {
+    public PagerAdapter getImageURL() {
         return imageURL;
     }
 
