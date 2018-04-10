@@ -7,18 +7,18 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 import java.util.List;
 
-public class Model {
+public class Model implements Serializable{
 
     @SerializedName("pages")
     @Expose
-    private List<ModelPages> results = null;
+    private List<ModelPages> pages = null;
 
-    public void setResults(List<ModelPages> results) {
-        this.results = results;
+    public void setPages(List<ModelPages> pages) {
+        this.pages = pages;
     }
 
-    public List<ModelPages> getResults() {
+    public List<ModelPages> getPages() {
 
-        return results;
+        return pages;
     }
 }

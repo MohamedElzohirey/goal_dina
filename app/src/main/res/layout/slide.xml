@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-   >
-
-
-
+    >
 
 
     <ImageView
 
-        android:id="@+id/img_landingPager"
+        android:id="@+id/img_Slider"
         android:layout_width="match_parent"
         android:layout_height="227dp"
         android:layout_alignParentStart="true"
@@ -20,13 +17,16 @@
 
 
     <TextView
-        android:id="@+id/txt_landingPager"
+        android:id="@+id/txt_Slider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/img_landingPager"
-        android:layout_alignParentLeft="true"
+        android:layout_alignBottom="@+id/img_Slider"
         android:layout_alignParentStart="true"
         android:text="Dina"
-        android:textColor="@color/colorPrimaryDark" />
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentLeft="true" />
+
+
+
 
 </RelativeLayout>

@@ -5,7 +5,9 @@ import android.support.v4.view.PagerAdapter;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ModelPages {
+import java.io.Serializable;
+
+public class ModelPages implements Serializable {
 
 
     @SerializedName("itemID")
@@ -66,7 +68,7 @@ public class ModelPages {
         return title;
     }
 
-    public PagerAdapter getImageURL() {
+    public String getImageURL() {
         return imageURL;
     }
 
@@ -81,7 +83,6 @@ public class ModelPages {
     public String getDetails() {
         return details;
     }
-
 
 
 }
