@@ -1,6 +1,9 @@
 package dina.filgoalapp.adapters;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
@@ -15,6 +18,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import dina.filgoalapp.R;
+import dina.filgoalapp.activities.NewsDetailsActivity;
 import dina.filgoalapp.fragments.HomeFragment;
 import dina.filgoalapp.models.Model;
 import dina.filgoalapp.models.ModelPages;
@@ -24,8 +28,8 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
     List<ModelPages> modelsList;
     Context mContext;
 
-    public RecyclerviewAdapter(Context mContext,  List<ModelPages> modelsList) {
-        this.modelsList =  modelsList;
+    public RecyclerviewAdapter(Context mContext, List<ModelPages> modelsList) {
+        this.modelsList = modelsList;
         this.mContext = mContext;
 
     }
@@ -41,9 +45,23 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
     @Override
     public void onBindViewHolder(@NonNull SliderHolder holder, int position) {
 
-        ModelPages item = modelsList.get(position);
+        final ModelPages item = modelsList.get(position);
         holder.textView.setText(item.getTitle());
         Picasso.with(mContext).load(modelsList.get(position).getImageURL()).into(holder.imageView);
+
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(mContext, NewsDetailsActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("ModelPagesDeltails", item);
+                intent.putExtras(bundle);
+                ((Activity) mContext).startActivity(intent);
+
+            }
+        });
 
     }
 
