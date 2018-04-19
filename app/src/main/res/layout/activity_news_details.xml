@@ -32,38 +32,48 @@
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
-                android:layout_gravity="bottom"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="bottom"
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/AppTheme.PopupOverlay" >
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+              >
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
-                        android:layout_marginStart="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:textStyle="bold"
+                        android:paddingStart="30dp"
+                        android:id="@+id/screen_title_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/screen_title_tv"/>
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:paddingLeft="50dp" />
                 </RelativeLayout>
             </android.support.v7.widget.Toolbar>
 
-            <Button
+            <android.support.design.widget.FloatingActionButton
 
                 android:id="@+id/btn_playButton"
-                android:layout_width="50dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/ic_play_arrow_black_24dp" />
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_play_circle_filled_white_48dp" />
 
-            <Button
+            <android.support.design.widget.FloatingActionButton
                 android:id="@+id/btn_FullScreen"
-                android:layout_width="50dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:background="@drawable/ic_fullscreen_black_24dp" />
+                android:layout_margin="@dimen/fab_margin"
+                app:srcCompat="@drawable/ic_fullscreen_white_24dp" />
 
 
         </android.support.design.widget.CollapsingToolbarLayout>
@@ -78,6 +88,6 @@
         android:layout_margin="@dimen/fab_margin"
         app:layout_anchor="@id/txt_News"
         app:layout_anchorGravity="bottom|end"
-        app:srcCompat="@drawable/ic_share_black_24dp" />
+        app:srcCompat="@drawable/ic_share_white_24dp" />
 
 </android.support.design.widget.CoordinatorLayout>

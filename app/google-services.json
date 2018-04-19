@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "451749563374",
+    "firebase_url": "https://filgoalapp.firebaseio.com",
+    "project_id": "filgoalapp",
+    "storage_bucket": "filgoalapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451749563374:android:4297022da174aca3",
+        "android_client_info": {
+          "package_name": "dina.filgoalapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "451749563374-dppo24glfs5crtu6svh0o4igls2dpen4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dina.filgoalapp",
+            "certificate_hash": "063ef35879d2962578842261e1e6a075290c5961"
+          }
+        },
+        {
+          "client_id": "451749563374-c008phrj0b3a9nvvt70l6f19lr5m1lt5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBc3TOOzkNZJFxuVzhfNAz1_Q1DBULBi0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "451749563374-c008phrj0b3a9nvvt70l6f19lr5m1lt5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

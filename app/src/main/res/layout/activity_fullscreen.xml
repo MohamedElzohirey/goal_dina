@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.github.piasy.biv.view.BigImageView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
-    tools:context=".activities.FullscreenActivity">
+    android:id="@+id/img__FullScreen"
+    tools:context=".activities.FullscreenActivity"/>
 
-   <ImageView
-       android:scaleType="fitXY"
-       android:src="@color/colorAccent"
-       android:id="@+id/img__FullScreen"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent" />
-
-</FrameLayout>

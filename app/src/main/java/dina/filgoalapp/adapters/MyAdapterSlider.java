@@ -27,7 +27,7 @@ public class MyAdapterSlider extends PagerAdapter {
     private LayoutInflater inflater;
 
 
-    public MyAdapterSlider(Context mContext,  List<ModelPages> modelsList) {
+    public MyAdapterSlider(Context mContext,List<ModelPages> modelsList) {
 
         this.modelsList =  modelsList;
         this.mContext = mContext;

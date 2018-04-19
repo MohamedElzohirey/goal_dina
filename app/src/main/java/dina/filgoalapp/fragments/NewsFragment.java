@@ -1,6 +1,7 @@
 package dina.filgoalapp.fragments;
 
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -19,6 +21,7 @@ import dina.filgoalapp.models.Model;
 import dina.filgoalapp.models.ModelPages;
 import dina.filgoalapp.network.APIClient;
 import dina.filgoalapp.network.APIInterface;
+import dina.filgoalapp.network.InternetChecker;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -33,6 +36,7 @@ public class NewsFragment extends Fragment {
     private APIInterface apiInterface;
     private RecyclerviewAdapter recyclerviewAdapter;
     View rootView;
+    private ProgressDialog dialog;
 
 
     public NewsFragment() {
@@ -45,9 +49,10 @@ public class NewsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView= inflater.inflate(R.layout.fragment_news, container, false);
+        dialog = new ProgressDialog(getActivity());
 
 
-        recyclerView = rootView.findViewById(R.id.recycler_ViewMatches);
+        recyclerView = rootView.findViewById(R.id.recycler_View);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         apiInterface = APIClient.GetAPIClient().create(APIInterface.class);
 
@@ -59,11 +64,18 @@ public class NewsFragment extends Fragment {
 
 
     private void CallModelPages() {
-
+        boolean isConnected = InternetChecker.isConnected(getActivity());
+        if (isConnected) {
         Call<Model> call = apiInterface.getModel();
+
+            dialog.setMessage("Doing something, please wait.");
+            dialog.show();
         call.enqueue(new Callback<Model>() {
             @Override
             public void onResponse(Call<Model> call, Response<Model> response) {
+                if (dialog.isShowing()) {
+                    dialog.dismiss();
+                }
                 modelsList = response.body().getPages();
 
                 recyclerView.setAdapter(new RecyclerviewAdapter(getContext(), response.body().getPages()));
@@ -77,6 +89,11 @@ public class NewsFragment extends Fragment {
 
             }
         });
+
+        } else {
+            Toast.makeText(getActivity(), "Please check your internet connection", Toast.LENGTH_LONG).show();
+        }
+
     }
 
 }

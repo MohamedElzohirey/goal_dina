@@ -1,14 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.MatchesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <info.hoang8f.android.segmented.SegmentedGroup
+        app:sc_tint_color="@color/colorPrimaryDark"
+        android:id="@+id/segmented"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="17dp"
+        android:orientation="horizontal"
+        app:sc_border_width="2dp"
+        app:sc_corner_radius="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="78dp">
+
+        <RadioButton
+            android:id="@+id/btn_tomorrow"
+            style="@style/RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="غدا" />
+
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/btn_today"
+            style="@style/RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اليوم" />
+
+        <RadioButton
+            android:id="@+id/btn_yesterday"
+            style="@style/RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="امس" />
+
+    </info.hoang8f.android.segmented.SegmentedGroup>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:nestedScrollingEnabled="false"
+        android:id="@+id/recyclerView_matches"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Matches Fragment" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="59dp"
+        android:layout_alignParentLeft="true" />
 
-</FrameLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>

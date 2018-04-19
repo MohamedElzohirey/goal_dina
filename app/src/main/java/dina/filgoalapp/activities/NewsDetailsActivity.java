@@ -29,9 +29,10 @@ public class NewsDetailsActivity extends AppCompatActivity {
     TextView textView;
     ImageView Image;
     Context mContext;
-    Button playVideoButton;
-    Button fullScreenButton;
-TextView screen_title_tv;
+    FloatingActionButton playVideoButton;
+    FloatingActionButton fullScreenButton;
+    TextView screen_title_tv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,14 +41,14 @@ TextView screen_title_tv;
         setSupportActionBar(toolbar);
         textView = findViewById(R.id.txt_News);
         Image = findViewById(R.id.img_News);
-        playVideoButton = findViewById(R.id.btn_playButton);
-        fullScreenButton = findViewById(R.id.btn_FullScreen);
+        playVideoButton =(FloatingActionButton) findViewById(R.id.btn_playButton);
+        fullScreenButton = (FloatingActionButton)findViewById(R.id.btn_FullScreen);
         screen_title_tv = findViewById(R.id.screen_title_tv);
         modelPages = (ModelPages) getIntent().getSerializableExtra("ModelPagesDeltails");
-        if (modelPages.getVideo() != null && !modelPages.getVideo().isEmpty()){
+        if (modelPages.getVideo() != null && !modelPages.getVideo().isEmpty()) {
             fullScreenButton.setVisibility(View.GONE);
             playVideoButton.setVisibility(View.VISIBLE);
-        }else {
+        } else {
             fullScreenButton.setVisibility(View.VISIBLE);
             playVideoButton.setVisibility(View.GONE);
         }

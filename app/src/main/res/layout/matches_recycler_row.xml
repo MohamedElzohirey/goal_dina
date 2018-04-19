@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/side_nav_bar">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        app:civ_border_width="1dp"
+        android:id="@+id/img_firstTeamFlag"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:src="@color/colorPrimary" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        app:civ_border_width="1dp"
+        android:id="@+id/img_secondTeamFlag"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/txt_tv"
+        android:src="@color/colorPrimary"
+        android:layout_alignLeft="@+id/txt_tv" />
+
+    <TextView
+        android:id="@+id/txt_firstTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_firstTeamFlag"
+        android:layout_toStartOf="@+id/img_tv"
+        android:text="TextView"
+        android:layout_toLeftOf="@+id/img_tv" />
+
+    <TextView
+        android:id="@+id/txt_secondTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/img_firstTeamFlag"
+        android:layout_marginStart="32dp"
+        android:text="TextView"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="32dp" />
+
+    <TextView
+
+        android:id="@+id/txt_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/txt_result2"
+        android:layout_marginEnd="118dp"
+        android:layout_marginRight="118dp"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/txt_result2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/txt_data"
+        android:layout_marginLeft="119dp"
+        android:layout_marginStart="119dp"
+        android:text="2" />
+
+    <TextView
+
+        android:id="@+id/txt_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp"
+        android:text="TextView" />
+
+
+    <TextView
+        android:id="@+id/txt_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img_tv"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="37dp"
+        android:text="TextView"
+        android:layout_marginRight="37dp"
+        android:layout_alignParentRight="true" />
+
+    <ImageView
+        android:src="@drawable/ic_live_tv_white_24dp"
+        android:id="@+id/img_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="125dp"
+        android:layout_alignParentRight="true" />
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
